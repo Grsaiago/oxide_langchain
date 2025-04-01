@@ -1,0 +1,8 @@
+[package]
+name = "main-test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+oxide-langchain-core = { version = "0.1.0", path = "../oxide-langchain-core" }
+oxide-langchain-macros = { version = "0.1.0", path = "../oxide-langchain-macros" }
