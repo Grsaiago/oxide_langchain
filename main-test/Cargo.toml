@@ -6,6 +6,7 @@ edition = "2024"
 [dependencies]
 oxide-langchain-core = { version = "0.1.0", path = "../oxide-langchain-core" }
 oxide-langchain-macros = { version = "0.1.0", path = "../oxide-langchain-macros" }
+oxide-langchain-utils = { version = "0.1.0", path = "../oxide-langchain-utils" }
 reqwest = "0.12.15"
 serde_json = "1.0.140"
 tokio = { version = "1.44.1", features = ["full"] }
