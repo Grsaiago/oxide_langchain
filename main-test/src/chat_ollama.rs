@@ -1,6 +1,6 @@
 use std::error::Error;
 
-use oxide_langchain_core::Runnable;
+use oxide_langchain::core::Runnable;
 use reqwest::{Client, ClientBuilder};
 use serde_json::{Map, Number, Value};
 

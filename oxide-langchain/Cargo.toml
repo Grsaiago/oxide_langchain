@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-oxide-langchain-core = {version = "0.1.0", path = "../oxide-langchain-core"}
+oxide-langchain-core = {version = "0.1.0", path = "../oxide-langchain-core", optional = true}
 oxide-langchain-macros = {version = "0.1.0", path = "../oxide-langchain-macros", optional = true}
 oxide-langchain-utils = {version = "0.1.0", path = "../oxide-langchain-utils", optional = true}
 
@@ -15,9 +15,11 @@ default = ["full"]
 
 # enable everything
 full = [
+	"core",
 	"macros",
 	"utils"
 ]
 
+core = ["dep:oxide-langchain-core"]
 macros = ["dep:oxide-langchain-macros"]
 utils = ["dep:oxide-langchain-utils"]

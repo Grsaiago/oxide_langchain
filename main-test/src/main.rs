@@ -4,8 +4,8 @@ use std::collections::HashMap;
 
 use chat_ollama::ChatOllama;
 use chat_open_ai::ChatOpenAI;
-use oxide_langchain_core::Runnable;
-use oxide_langchain_utils::runnable_from_fn;
+use oxide_langchain::core::Runnable;
+use oxide_langchain::utils::runnable_from_fn;
 use serde_json::{Number, Value};
 
 fn main() {
