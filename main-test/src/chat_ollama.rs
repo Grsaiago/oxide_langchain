@@ -5,24 +5,24 @@ use reqwest::{Client, ClientBuilder};
 use serde_json::{Map, Number, Value};
 
 #[derive(Debug)]
-pub struct ChatOpenAI {
+pub struct ChatOllama {
     client: Client,
 }
 
-impl Default for ChatOpenAI {
+impl Default for ChatOllama {
     fn default() -> Self {
         let client = ClientBuilder::new()
             .user_agent("chat-gpt-oxide-rust")
             .build()
             .expect("Error building client");
 
-        ChatOpenAI { client }
+        ChatOllama { client }
     }
 }
 
-impl ChatOpenAI {
-    fn new() -> ChatOpenAI {
-        ChatOpenAI::default()
+impl ChatOllama {
+    fn new() -> ChatOllama {
+        ChatOllama::default()
     }
 
     fn handle_bool_input(&self, input: bool) {
@@ -46,7 +46,7 @@ impl ChatOpenAI {
     }
 }
 
-impl Runnable for ChatOpenAI {
+impl Runnable for ChatOllama {
     fn invoke(&mut self, input: Value) -> Result<Value, Box<dyn Error>> {
         match input {
             Value::Object(input) => self.handle_object_input(input),

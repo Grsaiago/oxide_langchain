@@ -1,0 +1,23 @@
+[package]
+name = "oxide-langchain"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+oxide-langchain-core = {version = "0.1.0", path = "../oxide-langchain-core"}
+oxide-langchain-macros = {version = "0.1.0", path = "../oxide-langchain-macros", optional = true}
+oxide-langchain-utils = {version = "0.1.0", path = "../oxide-langchain-utils", optional = true}
+
+[features]
+
+# we enable everything by default
+default = ["full"]
+
+# enable everything
+full = [
+	"macros",
+	"utils"
+]
+
+macros = ["dep:oxide-langchain-macros"]
+utils = ["dep:oxide-langchain-utils"]

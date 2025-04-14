@@ -17,23 +17,23 @@ pub trait Runnable {
         unimplemented!()
     }
 
-    fn handle_bool_input(&mut self, input: bool) -> Result<Value, Box<dyn Error>> {
+    fn handle_bool_input(&mut self, _input: bool) -> Result<Value, Box<dyn Error>> {
         unimplemented!()
     }
 
-    fn handle_number_input(&mut self, input: Number) -> Result<Value, Box<dyn Error>> {
+    fn handle_number_input(&mut self, _input: Number) -> Result<Value, Box<dyn Error>> {
         unimplemented!()
     }
 
-    fn handle_string_input(&mut self, input: String) -> Result<Value, Box<dyn Error>> {
+    fn handle_string_input(&mut self, _input: String) -> Result<Value, Box<dyn Error>> {
         unimplemented!()
     }
 
-    fn handle_array_input(&mut self, input: Vec<Value>) -> Result<Value, Box<dyn Error>> {
+    fn handle_array_input(&mut self, _input: Vec<Value>) -> Result<Value, Box<dyn Error>> {
         unimplemented!()
     }
 
-    fn handle_object_input(&mut self, input: Map<String, Value>) -> Result<Value, Box<dyn Error>> {
+    fn handle_object_input(&mut self, _input: Map<String, Value>) -> Result<Value, Box<dyn Error>> {
         unimplemented!()
     }
 }
