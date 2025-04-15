@@ -9,3 +9,6 @@ pub use inputs::{
     HandlesArrayAsInput, HandlesBoolAsInput, HandlesNumberAsInput, HandlesObjectAsInput,
     HandlesStringAsInput,
 };
+
+mod document;
+pub use document::DocumentTrait;
