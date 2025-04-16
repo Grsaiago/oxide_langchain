@@ -4,7 +4,7 @@ use std::collections::HashMap;
 
 use chat_ollama::ChatOllama;
 use chat_open_ai::ChatOpenAI;
-use oxide_langchain::core::Runnable;
+use oxide_langchain::core::traits::Runnable;
 use oxide_langchain::utils::runnable_from_fn;
 use serde_json::{Number, Value};
 
@@ -25,7 +25,8 @@ fn main() {
             Ok(Value::Number(Number::from_f64(64.3).unwrap()))
         }
     });
-    vec![fn2, fn1];
+    runnable_map.insert("fn1".to_string(), fn1);
+    runnable_map.insert("fn2".to_string(), fn2);
 
     println!("Hello, world!");
 }

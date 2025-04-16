@@ -11,4 +11,4 @@ pub use inputs::{
 };
 
 mod document;
-pub use document::DocumentTrait;
+pub use document::Document;

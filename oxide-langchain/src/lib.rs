@@ -1,7 +1,10 @@
 #[cfg(feature = "core")]
 pub mod core {
-    pub use oxide_langchain_core::ARunnable;
-    pub use oxide_langchain_core::Runnable;
+    pub mod traits {
+        pub use oxide_langchain_core::ARunnable;
+        pub use oxide_langchain_core::Document;
+        pub use oxide_langchain_core::Runnable;
+    }
 }
 
 #[cfg(feature = "utils")]
