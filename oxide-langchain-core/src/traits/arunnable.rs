@@ -19,25 +19,25 @@ pub trait ARunnable {
         unimplemented!()
     }
 
-    async fn handle_bool_input(&mut self, input: bool) -> Result<Value, Box<dyn Error>> {
+    async fn handle_bool_input(&mut self, _input: bool) -> Result<Value, Box<dyn Error>> {
         unimplemented!()
     }
 
-    async fn handle_number_input(&mut self, input: Number) -> Result<Value, Box<dyn Error>> {
+    async fn handle_number_input(&mut self, _input: Number) -> Result<Value, Box<dyn Error>> {
         unimplemented!()
     }
 
-    async fn handle_string_input(&mut self, input: String) -> Result<Value, Box<dyn Error>> {
+    async fn handle_string_input(&mut self, _input: String) -> Result<Value, Box<dyn Error>> {
         unimplemented!()
     }
 
-    async fn handle_array_input(&mut self, input: Vec<Value>) -> Result<Value, Box<dyn Error>> {
+    async fn handle_array_input(&mut self, _input: Vec<Value>) -> Result<Value, Box<dyn Error>> {
         unimplemented!()
     }
 
     async fn handle_object_input(
         &mut self,
-        input: Map<String, Value>,
+        _input: Map<String, Value>,
     ) -> Result<Value, Box<dyn Error>> {
         unimplemented!()
     }
