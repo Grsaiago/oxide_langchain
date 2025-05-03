@@ -38,15 +38,6 @@ pub trait Runnable {
     }
 }
 
-impl<R> Runnable for Box<R>
-where
-    R: Runnable + ?Sized,
-{
-    fn invoke(&mut self, input: Value) -> Result<Value, Box<dyn Error>> {
-        self.invoke(input)
-    }
-}
-
 impl<T> Runnable for Vec<T>
 where
     T: Runnable,

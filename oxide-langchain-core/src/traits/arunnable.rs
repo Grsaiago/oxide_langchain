@@ -44,9 +44,19 @@ pub trait ARunnable {
 }
 
 #[async_trait]
+impl<F> ARunnable for F
+where
+    F: FnMut(Value) -> Result<Value, Box<dyn Error>> + Send + Sync + 'static,
+{
+    async fn ainvoke(&mut self, input: Value) -> Result<Value, Box<dyn Error>> {
+        self(input)
+    }
+}
+
+#[async_trait]
 impl<T> ARunnable for Vec<T>
 where
-    T: ARunnable + Sync + Send,
+    T: ARunnable + Sync + Send + 'static,
 {
     async fn ainvoke(&mut self, input: Value) -> Result<Value, Box<dyn Error>> {
         let mut acc = input;
