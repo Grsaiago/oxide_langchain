@@ -2,9 +2,7 @@ use serde_json::Value;
 use uuid::Uuid;
 
 pub trait Document {
-    fn id(&self) -> Option<Uuid> {
-        Some(Uuid::new_v4())
-    }
+    fn id(&self) -> Option<Uuid>;
 
     fn metadata(&self) -> Option<Value> {
         None
